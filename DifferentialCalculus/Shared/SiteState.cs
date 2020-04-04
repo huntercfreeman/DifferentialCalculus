@@ -11,7 +11,7 @@ namespace DifferentialCalculus.Shared
         public SiteState()
         {
             CurrentSectionTitle = "1.1";
-            CurrentProblem = new Problem { Number = 0, Answer = "Select a Section and Problem from the top left menu." };
+            CurrentProblem = new Problem { Number = 0, Answer = "Select a Section and Problem from the top left menu.", Images = new List<string> { "content/aawdas.png" } };
         }
 
         private Problem _currentProblem;

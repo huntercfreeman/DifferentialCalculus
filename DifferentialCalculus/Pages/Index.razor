@@ -3,6 +3,10 @@
 @if (!string.IsNullOrWhiteSpace(SiteState.CurrentProblem.Answer))
 {
     <h1>@SiteState.CurrentProblem.Answer</h1>
+    @foreach(string imageURL in SiteState.CurrentProblem.Images)
+    {
+        <img src="@imageURL"/>
+    }
 }
 else
 {

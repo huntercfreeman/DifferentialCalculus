@@ -10,6 +10,7 @@ namespace DifferentialCalculus.Models
         public int Number { get; set; }
         public string Question { get; set; }
         public string Answer { get; set; }
+        public List<string> Images { get; set; }
         public List<string> Tags { get; set; }
     }
 }
