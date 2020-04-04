@@ -11,6 +11,8 @@ namespace DifferentialCalculus.Shared
     {
         [Inject]
         public IProblemRepository ProblemRepository { get; set; }
+        [Inject]
+        public SiteState SiteState { get; set; }
         [Parameter]
         public string SectionTitle { get; set; }
         private bool IsCollapsed { get; set; } = true;

@@ -9,9 +9,14 @@
     else
     {
         <span class="oi oi-caret-top" aria-hidden="true"></span>
+    }
+</div>
+@if (!IsCollapsed)
+{
+    <div @onclick="(() => SiteState.CurrentSectionTitle = SectionTitle)">
         @foreach (Problem problem in ProblemRepository.GetProblems(SectionTitle))
         {
             <SideMenuProblem Problem="problem" />
         }
-    }
-</div>
+    </div>
+}

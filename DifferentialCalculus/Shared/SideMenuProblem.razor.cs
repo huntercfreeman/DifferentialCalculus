@@ -9,6 +9,8 @@ namespace DifferentialCalculus.Shared
 {
     public partial class SideMenuProblem : ComponentBase
     {
+        [Inject]
+        public SiteState SiteState { get; set; }
         [Parameter]
         public Problem Problem { get; set; }
         private bool IsHovered { get; set; }

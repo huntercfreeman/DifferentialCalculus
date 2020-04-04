@@ -1,5 +1,10 @@
 ﻿@page "/"
 
-<h1>Hello, world!</h1>
-
-Welcome to your new app.
+@if (!string.IsNullOrWhiteSpace(SiteState.CurrentProblem.Answer))
+{
+    <h1>@SiteState.CurrentProblem.Answer</h1>
+}
+else
+{
+    <h1>The problem has not been answered yet provide one here CLICK</h1>
+}

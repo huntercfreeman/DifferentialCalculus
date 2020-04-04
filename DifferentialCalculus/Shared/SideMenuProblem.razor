@@ -1,3 +1,3 @@
-﻿<div @onmouseover="(() => IsHovered = true)" @onmouseout="(() => IsHovered = false)" class="sideMenuProblem" style="@IsHoveredCSS">
+﻿<div @onclick="(() => SiteState.CurrentProblem = Problem)" @onmouseover="(() => IsHovered = true)" @onmouseout="(() => IsHovered = false)" class="sideMenuProblem" style="cursor: pointer; @IsHoveredCSS">
     @Problem.Number
 </div>
