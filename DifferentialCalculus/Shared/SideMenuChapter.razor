@@ -1,4 +1,6 @@
-﻿<div @onclick="(() => IsCollapsed = !IsCollapsed)" style="cursor: pointer; width: 100%; border: 1px solid black;">
+﻿@using Models
+
+<div @onclick="(() => IsCollapsed = !IsCollapsed)" style="cursor: pointer; width: 100%; border: 1px solid black;">
     Chapter @SectionTitle
     @if (IsCollapsed)
     {
@@ -7,5 +9,9 @@
     else
     {
         <span class="oi oi-caret-top" aria-hidden="true"></span>
+        @foreach (Problem problem in ProblemRepository.GetProblems(SectionTitle))
+        {
+            <SideMenuProblem Problem="problem" />
+        }
     }
 </div>

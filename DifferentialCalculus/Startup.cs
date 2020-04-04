@@ -11,6 +11,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using DifferentialCalculus.Data;
 using DifferentialCalculus.Shared;
+using DifferentialCalculus.Repositories;
+using DifferentialCalculus.Interfaces;
 
 namespace DifferentialCalculus
 {
@@ -31,6 +33,7 @@ namespace DifferentialCalculus
             services.AddServerSideBlazor();
             services.AddSingleton<WeatherForecastService>();
             services.AddScoped<SiteState>();
+            services.AddScoped<IProblemRepository, ProblemRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
