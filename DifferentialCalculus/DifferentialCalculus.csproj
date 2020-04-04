@@ -5,7 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\content\chapter1\" />
+    <Folder Include="wwwroot\content\chapter1\1.R\" />
+    <Folder Include="wwwroot\content\chapter1\1.1\" />
   </ItemGroup>
 
 </Project>

@@ -16,7 +16,7 @@ namespace DifferentialCalculus.Repositories
             // Chapter 1
             _sectionTitleProblems.Add("1.R", new List<Problem> 
             {
-                new Problem { Number = 1 },
+                new Problem { Number = 1, Images = new List<string> { "content/IMG_20200404_144745976.jpg" } },
                 new Problem { Number = 2 },
                 new Problem { Number = 3 },
                 new Problem { Number = 4 },

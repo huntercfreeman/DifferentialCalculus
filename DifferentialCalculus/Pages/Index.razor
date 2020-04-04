@@ -3,12 +3,23 @@
 @if (!string.IsNullOrWhiteSpace(SiteState.CurrentProblem.Answer))
 {
     <h1>@SiteState.CurrentProblem.Answer</h1>
-    @foreach(string imageURL in SiteState.CurrentProblem.Images)
+    @foreach (string imageURL in SiteState.CurrentProblem.Images)
     {
-        <img src="@imageURL"/>
+        <img src="@imageURL" style="max-width: 70vw;" />
     }
 }
 else
 {
     <h1>The problem has not been answered yet provide one here CLICK</h1>
+    @if (SiteState.CurrentProblem.Images == null || SiteState.CurrentProblem.Images.Count == 0)
+    {
+        <img src="content/IMG_20200404_144745976.jpg" style="max-width: 70vw;" />
+    }
+    else
+    {
+        @foreach (string imageURL in SiteState.CurrentProblem.Images)
+        {
+            <img src="@imageURL" style="max-width: 70vw;" />
+        }
+    }
 }
