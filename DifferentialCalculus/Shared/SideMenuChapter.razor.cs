@@ -10,5 +10,6 @@ namespace DifferentialCalculus.Shared
     {
         [Parameter]
         public string SectionTitle { get; set; }
+        private bool IsCollapsed { get; set; }
     }
 }

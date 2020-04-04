@@ -1,3 +1,11 @@
-﻿<div>
+﻿<div @onclick="(() => IsCollapsed = !IsCollapsed)" style="cursor: pointer; width: 100%; border: 1px solid black;">
     Chapter @SectionTitle
+    @if (IsCollapsed)
+    {
+        <span class="oi oi-caret-bottom" aria-hidden="true"></span>
+    }
+    else
+    {
+        <span class="oi oi-caret-top" aria-hidden="true"></span>
+    }
 </div>
