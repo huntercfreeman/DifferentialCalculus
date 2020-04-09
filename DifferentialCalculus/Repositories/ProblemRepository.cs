@@ -53,13 +53,13 @@ namespace DifferentialCalculus.Repositories
             });
             _sectionTitleProblems.Add("1.1", new List<Problem>
             {
-                new Problem { Number = 1 },
-                new Problem { Number = 2 },
-                new Problem { Number = 3 },
-                new Problem { Number = 4 },
-                new Problem { Number = 5 },
-                new Problem { Number = 6 },
-                new Problem { Number = 7 },
+                new Problem { Number = 1, Images = new List<string> { "content/chapter1/1.1/1.1-1.jpg" }, Answer = "", VerifiedCorrect = true },
+                new Problem { Number = 2, Images = new List<string> { "content/chapter1/1.1/1.1-2.jpg" }, Answer = "" },
+                new Problem { Number = 3, Images = new List<string> { "content/chapter1/1.1/1.1-3.jpg" }, Answer = "", VerifiedCorrect = true },
+                new Problem { Number = 4, Images = new List<string> { "content/chapter1/1.1/1.1-4.jpg" }, Answer = "" },
+                new Problem { Number = 5, Images = new List<string> { "content/chapter1/1.1/1.1-5.jpg" }, Answer = "", VerifiedCorrect = true },
+                new Problem { Number = 6, Images = new List<string> { "content/chapter1/1.1/1.1-6.jpg" }, Answer = "", VerifiedCorrect = true },
+                new Problem { Number = 7, Images = new List<string> { "content/chapter1/1.1/1.1-7.jpg" }, Answer = "", VerifiedCorrect = true },
                 new Problem { Number = 8 },
                 new Problem { Number = 9 },
                 new Problem { Number = 10 },

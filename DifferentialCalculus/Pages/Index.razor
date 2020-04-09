@@ -1,6 +1,6 @@
 ﻿@page "/"
 
-@if (!string.IsNullOrWhiteSpace(SiteState.CurrentProblem.Answer))
+@if (SiteState.CurrentProblem.Answer != null)
 {
     <h1>@SiteState.CurrentProblem.Answer</h1>
     @foreach (string imageURL in SiteState.CurrentProblem.Images)
