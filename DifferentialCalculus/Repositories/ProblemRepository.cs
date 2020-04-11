@@ -89,7 +89,7 @@ namespace DifferentialCalculus.Repositories
                 new Problem { Number = 34, Images = new List<string> { "content/chapter1/1.1/1.1-34.jpg" }, Answer = "" },
                 new Problem { Number = 35, Images = new List<string> { "content/chapter1/1.1/1.1-35.jpg" }, Answer = "" },
                 new Problem { Number = 36, Images = new List<string> { "content/chapter1/1.1/1.1-36.jpg" }, Answer = "" },
-                new Problem { Number = 37 },
+                new Problem { Number = 37, Images = new List<string> { "content/chapter1/1.1/1.1-37.jpg" }, Answer = "" },
                 new Problem { Number = 38 },
                 new Problem { Number = 39 },
                 new Problem { Number = 40 },
