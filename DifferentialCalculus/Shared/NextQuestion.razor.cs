@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DifferentialCalculus.Shared
 {
-    public partial class PreviousQuestion : ComponentBase
+    public partial class NextQuestion : ComponentBase
     {
         [Inject]
         public SiteState SiteState { get; set; }
@@ -16,12 +16,12 @@ namespace DifferentialCalculus.Shared
         public IProblemRepository ProblemRepository { get; set; }
 
 
-        public void GetPreviousQuestion()
+        public void GetNextQuestion()
         {
             List<Problem> problems = ProblemRepository.GetProblems(SiteState.CurrentSectionTitle);
 
-            if (SiteState.CurrentProblem.Number - 2 >= 0)
-                SiteState.CurrentProblem = problems[SiteState.CurrentProblem.Number - 2];
+            if (problems.Count > SiteState.CurrentProblem.Number)
+                SiteState.CurrentProblem = problems[SiteState.CurrentProblem.Number];
         }
     }
 }
