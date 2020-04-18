@@ -2,7 +2,7 @@
 
 @if (SiteState.CurrentProblem.Answer != null)
 {
-    <h1>@SiteState.CurrentProblem.Answer</h1>
+    @((MarkupString)(SiteState.CurrentProblem.Answer))
     @foreach (string imageURL in SiteState.CurrentProblem.Images)
     {
         <img src="@imageURL" style="max-width: 70vw;" />
