@@ -1,17 +1,26 @@
 ﻿@inherits LayoutComponentBase
 @inject SiteState SiteState
-
+@using Models
 
 <div class="main" style="position: relative;">
-    <SideMenu/>
+    <SideMenu />
 
     <div class="top-row" style="padding-left: 5px !important; display: flex !important; justify-content: space-between;">
         <div style="border-right: 1px solid black; height: 100%; padding-right: 5px;"><span class="oi oi-list-rich" style="position: inherit; top: inherit; line-height: normal; font-size: 45px; cursor: pointer;" aria-hidden="true" @onclick="(() => SiteState.DisplaySideMenu = !SiteState.DisplaySideMenu)"></span></div>
-        <PreviousQuestion/><DisplayCurrentItems/><NextQuestion/>
-        <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
+        <PreviousQuestion /><DisplayCurrentItems /><NextQuestion />
+        <a @onclick="SetToAbout" href="javascript:void(0);">About</a>
     </div>
 
     <div class="content px-4">
         @Body
     </div>
 </div>
+
+@code
+{
+    private void SetToAbout()
+    {
+        SiteState.CurrentSectionTitle = "1.1";
+        SiteState.CurrentProblem = new Problem { Number = 0, Answer = "<h1>Select a Section and Problem from the top left menu.</br> This site contains all the answers to:</br>ISBN: 0495557420</br>ISBN-13: 9780495557425</br>Authors:James Stewart</br></h1>", Images = new List<string> { "content/9688171_1375654336_Width288.jpg" } };
+    }
+}
