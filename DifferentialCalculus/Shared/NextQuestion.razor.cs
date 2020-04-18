@@ -18,7 +18,7 @@ namespace DifferentialCalculus.Shared
 
         public void GetNextQuestion()
         {
-            List<Problem> problems = ProblemRepository.GetProblems(SiteState.CurrentSectionTitle);
+            List<Problem> problems = ProblemRepository.GetProblems(SiteState.CurrentBook, SiteState.CurrentSectionTitle);
 
             if (problems.Count > SiteState.CurrentProblem.Number)
                 SiteState.CurrentProblem = problems[SiteState.CurrentProblem.Number];

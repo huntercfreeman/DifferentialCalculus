@@ -8,6 +8,6 @@ namespace DifferentialCalculus.Interfaces
 {
     public interface IProblemRepository
     {
-        public List<Problem> GetProblems(string sectionTitle);
+        public List<Problem> GetProblems(string book, string sectionTitle);
     }
 }

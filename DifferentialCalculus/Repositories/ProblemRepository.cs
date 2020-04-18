@@ -9,12 +9,14 @@ namespace DifferentialCalculus.Repositories
 {
     public class ProblemRepository : IProblemRepository
     {
-        private Dictionary<string, List<Problem>> _sectionTitleProblems = new Dictionary<string, List<Problem>>();
+        private Dictionary<string, List<Problem>> _differentialCalculus = new Dictionary<string, List<Problem>>();
+        private Dictionary<string, Dictionary<string, List<Problem>>> _books = new Dictionary<string, Dictionary<string, List<Problem>>>();
 
         public ProblemRepository()
         {
+            _books.Add("DifferentialCalculus", _differentialCalculus);
             // Chapter 1
-            _sectionTitleProblems.Add("1.R", new List<Problem> 
+            _differentialCalculus.Add("1.R", new List<Problem> 
             {
                 new Problem { Number = 1, Images = new List<string> { "content/IMG_20200404_144745976.jpg" } },
                 new Problem { Number = 2 },
@@ -51,7 +53,7 @@ namespace DifferentialCalculus.Repositories
                 new Problem { Number = 33 },
                 new Problem { Number = 34 }
             });
-            _sectionTitleProblems.Add("1.1", new List<Problem>
+            _differentialCalculus.Add("1.1", new List<Problem>
             {
                 new Problem { Number = 1, Images = new List<string> { "content/chapter1/1.1/1.1-1.jpg" }, Answer = "", VerifiedCorrect = true },
                 new Problem { Number = 2, Images = new List<string> { "content/chapter1/1.1/1.1-2.jpg" }, Answer = "" },
@@ -128,7 +130,7 @@ namespace DifferentialCalculus.Repositories
                 new Problem { Number = 73, Images = new List<string> { "content/chapter1/1.1/1.1-73.jpg" }, Answer = "" },
                 new Problem { Number = 74, Images = new List<string> { "content/chapter1/1.1/1.1-74.jpg" }, Answer = "" }
             });
-            _sectionTitleProblems.Add("1.2", new List<Problem> 
+            _differentialCalculus.Add("1.2", new List<Problem> 
             {
                 new Problem { Number = 1 },
                 new Problem { Number = 2 },
@@ -157,7 +159,7 @@ namespace DifferentialCalculus.Repositories
                 new Problem { Number = 25 },
                 new Problem { Number = 26 }
             });
-            _sectionTitleProblems.Add("1.3", new List<Problem>
+            _differentialCalculus.Add("1.3", new List<Problem>
             {
                 new Problem { Number = 1 },
                 new Problem { Number = 2 },
@@ -224,7 +226,7 @@ namespace DifferentialCalculus.Repositories
                 new Problem { Number = 63 },
                 new Problem { Number = 64 }
             });
-            _sectionTitleProblems.Add("1.4", new List<Problem>
+            _differentialCalculus.Add("1.4", new List<Problem>
             {
                 new Problem { Number = 1 },
                 new Problem { Number = 2 },
@@ -265,7 +267,7 @@ namespace DifferentialCalculus.Repositories
                 new Problem { Number = 37 },
                 new Problem { Number = 38 }
             });
-            _sectionTitleProblems.Add("1.5", new List<Problem> 
+            _differentialCalculus.Add("1.5", new List<Problem> 
             {
                 new Problem { Number = 1 },
                 new Problem { Number = 2 },
@@ -304,7 +306,7 @@ namespace DifferentialCalculus.Repositories
                 new Problem { Number = 35 },
                 new Problem { Number = 36 }
             });
-            _sectionTitleProblems.Add("1.6", new List<Problem>
+            _differentialCalculus.Add("1.6", new List<Problem>
             {
                 new Problem { Number = 1 },
                 new Problem { Number = 2 },
@@ -369,7 +371,7 @@ namespace DifferentialCalculus.Repositories
                 new Problem { Number = 61 },
                 new Problem { Number = 62 }
             });
-            _sectionTitleProblems.Add("1.7", new List<Problem> 
+            _differentialCalculus.Add("1.7", new List<Problem> 
             {
                 new Problem { Number = 1 },
                 new Problem { Number = 2 },
@@ -420,7 +422,7 @@ namespace DifferentialCalculus.Repositories
             });
 
             // Chapter 2
-            _sectionTitleProblems.Add("2.R", new List<Problem> 
+            _differentialCalculus.Add("2.R", new List<Problem> 
             {
                 new Problem { Number = 1 },
                 new Problem { Number = 2 },
@@ -471,7 +473,7 @@ namespace DifferentialCalculus.Repositories
                 new Problem { Number = 47 },
                 new Problem { Number = 48 }
             });
-            _sectionTitleProblems.Add("2.1", new List<Problem> 
+            _differentialCalculus.Add("2.1", new List<Problem> 
             {
                 new Problem { Number = 1 },
                 new Problem { Number = 2 },
@@ -483,7 +485,7 @@ namespace DifferentialCalculus.Repositories
                 new Problem { Number = 8 },
                 new Problem { Number = 9 }
             });
-            _sectionTitleProblems.Add("2.2", new List<Problem>
+            _differentialCalculus.Add("2.2", new List<Problem>
             {
                 new Problem { Number = 1 },
                 new Problem { Number = 2 },
@@ -518,7 +520,7 @@ namespace DifferentialCalculus.Repositories
                 new Problem { Number = 31 },
                 new Problem { Number = 32 }
             });
-            _sectionTitleProblems.Add("2.3", new List<Problem> 
+            _differentialCalculus.Add("2.3", new List<Problem> 
             {
                 new Problem { Number = 1 },
                 new Problem { Number = 2 },
@@ -570,7 +572,7 @@ namespace DifferentialCalculus.Repositories
                 new Problem { Number = 49 },
                 new Problem { Number = 50 }
             });
-            _sectionTitleProblems.Add("2.4", new List<Problem> 
+            _differentialCalculus.Add("2.4", new List<Problem> 
             {
                 new Problem { Number = 1 },
                 new Problem { Number = 2 },
@@ -628,7 +630,7 @@ namespace DifferentialCalculus.Repositories
                 new Problem { Number = 54 },
                 new Problem { Number = 55 }
             });
-            _sectionTitleProblems.Add("2.5", new List<Problem> 
+            _differentialCalculus.Add("2.5", new List<Problem> 
             {
                 new Problem { Number = 1 },
                 new Problem { Number = 2 },
@@ -689,7 +691,7 @@ namespace DifferentialCalculus.Repositories
                 new Problem { Number = 57 },
                 new Problem { Number = 58 }
             });
-            _sectionTitleProblems.Add("2.6", new List<Problem> 
+            _differentialCalculus.Add("2.6", new List<Problem> 
             {
                 new Problem { Number = 1 },
                 new Problem { Number = 2 },
@@ -746,7 +748,7 @@ namespace DifferentialCalculus.Repositories
                 new Problem { Number = 53 },
                 new Problem { Number = 54 }
             });
-            _sectionTitleProblems.Add("2.7", new List<Problem> 
+            _differentialCalculus.Add("2.7", new List<Problem> 
             {
                 new Problem { Number = 1 },
                 new Problem { Number = 2 },
@@ -804,7 +806,7 @@ namespace DifferentialCalculus.Repositories
                 new Problem { Number = 54 },
                 new Problem { Number = 55 }
             });
-            _sectionTitleProblems.Add("2.8", new List<Problem> 
+            _differentialCalculus.Add("2.8", new List<Problem> 
             {
                 new Problem { Number = 1 },
                 new Problem { Number = 2 },
@@ -843,7 +845,7 @@ namespace DifferentialCalculus.Repositories
             });
 
             // Chapter 3
-            _sectionTitleProblems.Add("3.R", new List<Problem> 
+            _differentialCalculus.Add("3.R", new List<Problem> 
             {
                 new Problem { Number = 1 },
                 new Problem { Number = 2 },
@@ -926,7 +928,7 @@ namespace DifferentialCalculus.Repositories
                 new Problem { Number = 79 },
                 new Problem { Number = 80 }
             });
-            _sectionTitleProblems.Add("3.1", new List<Problem> 
+            _differentialCalculus.Add("3.1", new List<Problem> 
             {
                 new Problem { Number = 1 },
                 new Problem { Number = 2 },
@@ -1003,7 +1005,7 @@ namespace DifferentialCalculus.Repositories
                 new Problem { Number = 73 },
                 new Problem { Number = 74 }
             });
-            _sectionTitleProblems.Add("3.2", new List<Problem> 
+            _differentialCalculus.Add("3.2", new List<Problem> 
             {
                 new Problem { Number = 1 },
                 new Problem { Number = 2 },
@@ -1069,11 +1071,11 @@ namespace DifferentialCalculus.Repositories
         }
 
 
-        public List<Problem> GetProblems(string sectionTitle)
+        public List<Problem> GetProblems(string book, string sectionTitle)
         {
             try
             {
-                return _sectionTitleProblems[sectionTitle];
+                return _books[book][sectionTitle];
             }
             catch(Exception)
             {

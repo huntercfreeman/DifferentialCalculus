@@ -10,8 +10,26 @@ namespace DifferentialCalculus.Shared
     {
         public SiteState()
         {
+            CurrentBook = "DifferentialCalculus";
             CurrentSectionTitle = "1.1";
             CurrentProblem = new Problem { Number = 0, Answer = "<h1>Select a Section and Problem from the top left menu.</br> This site contains all the answers to:</br>ISBN: 0495557420</br>ISBN-13: 9780495557425</br>Authors:James Stewart</br></h1>", Images = new List<string> { "content/9688171_1375654336_Width288.jpg" } };
+        }
+
+        private string _currentBook;
+        public string CurrentBook
+        {
+            get => _currentBook;
+            set
+            {
+                _currentBook = value;
+                CurrentBookEventInvoke(new EventArgs());
+            }
+        }
+        public event EventHandler CurrentBookEventHandler;
+        public void CurrentBookEventInvoke(EventArgs e)
+        {
+            EventHandler handler = CurrentBookEventHandler;
+            handler?.Invoke(this, e);
         }
 
         private Problem _currentProblem;

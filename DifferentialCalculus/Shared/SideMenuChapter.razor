@@ -14,7 +14,7 @@
 @if (!IsCollapsed)
 {
     <div @onclick="(() => SiteState.CurrentSectionTitle = SectionTitle)">
-        @foreach (Problem problem in ProblemRepository.GetProblems(SectionTitle))
+        @foreach (Problem problem in ProblemRepository.GetProblems(SiteState.CurrentBook, SectionTitle))
         {
             <SideMenuProblem Problem="problem" />
         }
