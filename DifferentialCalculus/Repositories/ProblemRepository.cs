@@ -9,16 +9,6 @@ namespace DifferentialCalculus.Repositories
 {
     public class ProblemRepository : IProblemRepository
     {
-        public static class Books
-        {
-            public static string DifferentialCalculus = "DifferentialCalculus";
-            public static string IntegralCalculus = "IntegralCalculus";
-            public static string MultivariableCalculus = "MultivariableCalculus";
-            public static string DifferentialEquations = "DifferentialEquations";
-            public static string LinearAlgebra = "LinearAlgebra";
-            public static string DiscreteMath = "DiscreteMath";
-        }
-
         private Dictionary<string, List<Problem>> _differentialCalculus = new Dictionary<string, List<Problem>>();
         private Dictionary<string, Dictionary<string, List<Problem>>> _books = new Dictionary<string, Dictionary<string, List<Problem>>>();
 

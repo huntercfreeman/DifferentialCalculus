@@ -1,6 +1,13 @@
-﻿@if (SiteState.DisplayBookMenu)
+﻿@using Repositories
+
+@if (SiteState.DisplayBookMenu)
 {
     <div style="z-index: 10; position: fixed; top: 56px; left: 0; height: 60vh; width: 60vw; background-color: white; border: 1px solid black; box-shadow: 10px 10px 5px grey;">
-
+        <BookItem BookTitle="Differential Calculus" InternalBookTitle="@Books.DifferentialCalculus" />
+        <BookItem BookTitle="Integral Calculus" InternalBookTitle="@Books.IntegralCalculus"/>
+        <BookItem BookTitle="Multivariable Calculus" InternalBookTitle="@Books.MultivariableCalculus" />
+        <BookItem BookTitle="Differential Equations" InternalBookTitle="@Books.DifferentialEquations" />
+        <BookItem BookTitle="Linear Algebra" InternalBookTitle="@Books.LinearAlgebra" />
+        <BookItem BookTitle="Discrete Math" InternalBookTitle="@Books.DiscreteMath" />
     </div>
 }
