@@ -82,5 +82,22 @@ namespace DifferentialCalculus.Shared
             EventHandler handler = DisplaySideMenuEventHandler;
             handler?.Invoke(this, e);
         }
+
+        private bool _displayBookMenu;
+        public bool DisplayBookMenu
+        {
+            get => _displayBookMenu;
+            set
+            {
+                _displayBookMenu = value;
+                DisplayBookMenuEventInvoke(new EventArgs());
+            }
+        }
+        public event EventHandler DisplayBookMenuEventHandler;
+        public void DisplayBookMenuEventInvoke(EventArgs e)
+        {
+            EventHandler handler = DisplayBookMenuEventHandler;
+            handler?.Invoke(this, e);
+        }
     }
 }

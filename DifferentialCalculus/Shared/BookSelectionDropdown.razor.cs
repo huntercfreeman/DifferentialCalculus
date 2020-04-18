@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DifferentialCalculus.Shared
 {
-    public partial class SideMenu : ComponentBase, IDisposable
+    public partial class BookSelectionDropdown : ComponentBase, IDisposable
     {
         [Inject]
         public SiteState SiteState { get; set; }
@@ -14,17 +14,17 @@ namespace DifferentialCalculus.Shared
         protected override void OnInitialized()
         {
             base.OnInitialized();
-            SiteState.DisplaySideMenuEventHandler += SiteState_DisplaySideMenuEventHandler;
+            SiteState.DisplayBookMenuEventHandler += SiteState_DisplayBookMenuEventHandler;
         }
 
-        private void SiteState_DisplaySideMenuEventHandler(object sender, EventArgs e)
+        private void SiteState_DisplayBookMenuEventHandler(object sender, EventArgs e)
         {
             InvokeAsync(StateHasChanged);
         }
 
         public void Dispose()
         {
-            SiteState.DisplaySideMenuEventHandler -= SiteState_DisplaySideMenuEventHandler;
+            SiteState.DisplayBookMenuEventHandler -= SiteState_DisplayBookMenuEventHandler;
         }
     }
 }
