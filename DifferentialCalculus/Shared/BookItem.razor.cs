@@ -16,5 +16,11 @@ namespace DifferentialCalculus.Shared
         public string InternalBookTitle { get; set; }
         [Parameter]
         public string ImageURL { get; set; }
+
+        public bool IsHovered { get; set; }
+        public string IsHoveredCSS
+        {
+            get => IsHovered ? "background-color: lightgray;" : "background-color: white;";
+        }
     }
 }

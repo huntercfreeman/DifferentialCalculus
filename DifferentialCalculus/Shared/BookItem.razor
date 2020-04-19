@@ -1,3 +1,3 @@
-﻿<div @onclick="(() => { SiteState.CurrentBook = InternalBookTitle; SiteState.DisplayBookMenu = false; })">
+﻿<div @onmouseover="(() => IsHovered = true)" @onmouseout="(() => IsHovered = false)" style="cursor: pointer; @IsHoveredCSS" @onclick="(() => { SiteState.CurrentBook = InternalBookTitle; SiteState.DisplayBookMenu = false; })">
     @BookTitle
 </div>
