@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Components;
+﻿using DifferentialCalculus.Interfaces;
+using Microsoft.AspNetCore.Components;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,8 @@ namespace DifferentialCalculus.Shared
     {
         [Inject]
         public SiteState SiteState { get; set; }
-
+        [Inject]
+        public IProblemRepository ProblemRepository { get; set; }
         protected override void OnInitialized()
         {
             base.OnInitialized();

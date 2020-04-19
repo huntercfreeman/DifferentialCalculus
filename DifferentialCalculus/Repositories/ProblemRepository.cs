@@ -9,11 +9,129 @@ namespace DifferentialCalculus.Repositories
 {
     public class ProblemRepository : IProblemRepository
     {
+        private Dictionary<string, List<string>> _bookSections = new Dictionary<string, List<string>>();
         private Dictionary<string, List<Problem>> _differentialCalculus = new Dictionary<string, List<Problem>>();
         private Dictionary<string, Dictionary<string, List<Problem>>> _books = new Dictionary<string, Dictionary<string, List<Problem>>>();
 
         public ProblemRepository()
         {
+            _bookSections.Add(Books.DifferentialCalculus, new List<string>
+                {
+                    "1.R",
+                    "1.1",
+                    "1.2",
+                    "1.3",
+                    "1.4",
+                    "1.5",
+                    "1.6",
+                    "1.7",
+                    "2.R",
+                    "2.1",
+                    "2.2",
+                    "2.3",
+                    "2.4",
+                    "2.5",
+                    "2.6",
+                    "2.7",
+                    "2.8",
+                    "3.R",
+                    "3.1",
+                    "3.2",
+                    "3.3",
+                    "3.4",
+                    "3.5",
+                    "3.6",
+                    "3.7",
+                    "3.8",
+                    "3.9",
+                    "4.R",
+                    "4.1",
+                    "4.2",
+                    "4.3",
+                    "4.4",
+                    "4.5",
+                    "4.6",
+                    "4.7",
+                    "4.8",
+                    "5.R",
+                    "5.1",
+                    "5.2",
+                    "5.3",
+                    "5.4",
+                    "5.5",
+                    "5.6",
+                    "5.7",
+                    "5.8",
+                    "5.9",
+                    "6.R",
+                    "6.1",
+                    "6.2",
+                    "6.3",
+                    "6.4",
+                    "6.5",
+                    "6.6",
+                    "6.7",
+                    "6.8",
+                    "7.R",
+                    "7.1",
+                    "7.2",
+                    "7.3",
+                    "7.4",
+                    "7.5",
+                    "7.6",
+                    "8.R",
+                    "8.1",
+                    "8.2",
+                    "8.3",
+                    "8.4",
+                    "8.5",
+                    "8.6",
+                    "8.7",
+                    "8.8",
+                    "9.R",
+                    "9.1",
+                    "9.2",
+                    "9.3",
+                    "9.4",
+                    "9.5",
+                    "9.6",
+                    "9.7",
+                    "10.R",
+                    "10.1",
+                    "10.2",
+                    "10.3",
+                    "10.4",
+                    "10.5",
+                    "11.R",
+                    "11.1",
+                    "11.2",
+                    "11.3",
+                    "11.4",
+                    "11.5",
+                    "11.6",
+                    "11.7",
+                    "11.8",
+                    "12.R",
+                    "12.1",
+                    "12.2",
+                    "12.3",
+                    "12.4",
+                    "12.5",
+                    "12.6",
+                    "12.7",
+                    "12.8",
+                    "12.9",
+                    "13.R",
+                    "13.1",
+                    "13.2",
+                    "13.3",
+                    "13.4",
+                    "13.5",
+                    "13.6",
+                    "13.7",
+                    "13.8",
+                });
+
             _books.Add(Books.DifferentialCalculus, _differentialCalculus);
             // Chapter 1
             _differentialCalculus.Add("1.R", new List<Problem> 
@@ -1070,6 +1188,10 @@ namespace DifferentialCalculus.Repositories
             });
         }
 
+        public List<string> GetSectionTitles(string book)
+        {
+            return _bookSections[book];
+        }
 
         public List<Problem> GetProblems(string book, string sectionTitle)
         {
