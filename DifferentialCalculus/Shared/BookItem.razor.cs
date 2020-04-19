@@ -8,6 +8,8 @@ namespace DifferentialCalculus.Shared
 {
     public partial class BookItem : ComponentBase
     {
+        [Inject]
+        public SiteState SiteState { get; set; }
         [Parameter]
         public string BookTitle { get; set; }
         [Parameter]

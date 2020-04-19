@@ -1079,7 +1079,10 @@ namespace DifferentialCalculus.Repositories
             }
             catch(Exception)
             {
-                return new List<Problem>();
+                Problem example = new Problem { Number = 0, Answer = "<h1>Select a Section and Problem from the top left menu.</br> This site contains all the answers to:</br>ISBN: 0495557420</br>ISBN-13: 9780495557425</br>Authors:James Stewart</br></h1>", Images = new List<string> { "content/9688171_1375654336_Width288.jpg" } };
+                List<Problem> problems = new List<Problem>();
+                problems.Add(example);
+                return problems;
             }
         }
     }
